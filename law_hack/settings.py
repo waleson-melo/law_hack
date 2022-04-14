@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local apps
     'dashboard.apps.DashboardConfig',
+    'usuarios.apps.UsuariosConfig',
     'alunos.apps.AlunosConfig',
 ]
 
