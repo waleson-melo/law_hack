@@ -1,1 +1,41 @@
-Index Aluno
+{% extends "template.html" %}
+
+{% load static %}
+
+{% block nome_pagina %}
+    <title>Alunos</title>
+{% endblock %}
+
+{% block btn_voltar_pagina %}
+    <div class="label_menu_left">
+        <a href="#">Voltar</a>
+    </div>
+{% endblock %}
+
+{% block menus %}
+    <div class="button-main">
+        <div class="button">
+            <a href="#"Cadastrar Aluno">
+                <img src="{% static 'img/cadastrar.png' %}" alt="Cadastrar Aluno" width="64" height="64">
+                <br>
+                <p>Cadastrar<br>Aluno</p>
+            </a>
+        </div>
+
+        <div class="button">
+            <a href="#" title="Editar Aluno">
+                <img src="{% static 'img/editar.png' %}" alt="Editar Aluno" width="64" height="64">
+                <br>
+                <p>Editar<br>Aluno</p>
+            </a>
+        </div>
+
+        <div class="button">
+            <a href="#" title="Listar Aluno">
+                <img src="{% static 'img/listar.png' %}" alt="Listar Aluno" width="64" height="64">
+                <br>
+                <p>Listar<br>Alunos</p>
+            </a>
+        </div>
+    </div>
+{% endblock %}
