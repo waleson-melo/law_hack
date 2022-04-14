@@ -187,6 +187,11 @@ header input {
   background: #b61d1d;
 }
 
+.label_menu_left {
+  float: left;
+  padding: 10px;
+}
+
 footer {
   position: fixed;
   left: 0;
