@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <meta charset="UTF-8">
+    {% block nome_pagina %}
+        <title>LAW HACK</title>
+    {% endblock %}
+</head>
+<body>
+    <header>
+
+        <div class="centered">
+            <a href="#">Lib 3.11</a>
+        </div>
+
+        {% block btn_voltar_pagina %}
+            <div class="label_menu_left">
+                <a href="#">Voltar</a>
+            </div>
+        {% endblock %}
+
+        <div class="right">
+            <a href="#">Sair</a>
+        </div>
+    </header>
+
+    {% block menus %}
+
+    {% endblock %}
+
+    <footer>
+        <P>LAWHACK</P>
+        <P>2021-2022</P>
+    </footer>
+</body>
+</html>
