@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Local apps
+    'dashboard.apps.DashboardConfig',
     'alunos.apps.AlunosConfig',
 ]
 
