@@ -9,3 +9,6 @@ class CadastrarAluno(TemplateView):
 
 class AlterarAluno(TemplateView):
     template_name = 'paginas/alterar_aluno.html'
+
+class ListarAlunos(TemplateView):
+    template_name = 'paginas/listar_alunos.html'
