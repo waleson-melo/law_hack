@@ -219,3 +219,38 @@ footer {
 .excluir a:hover {
   color: antiquewhite;
 }
+
+.search-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.search-area input {
+    width: 349px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #272323;
+    border-radius: 10px;
+    border-style: none;
+    color: #ffffff;
+    font-size: 90%;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+#search {
+    cursor: pointer;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    background-color: #b61d1d;
+    border-radius: 10px;
+    border-style: none;
+    color: #ffffff;
+    font-size: 90%;
+    border-style: none;
+    cursor: pointer;
+    font-weight: bold;
+}
