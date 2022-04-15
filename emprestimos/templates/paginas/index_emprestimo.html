@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+
+{% load static %}
+
+{% block nome_pagina %}
+    <title>Emprestimos</title>
+{% endblock %}
+
+{% block btn_voltar_pagina %}
+    <div class="label_menu_left">
+        <a href="{% url 'dashboard-index' %}">Voltar</a>
+    </div>
+{% endblock %}
+
+{% block menus %}
+    <div class="button-main">
+        <div class="button">
+            <a href="{% url 'emprestimos-cadastrar' %}" title="Cadastrar Livro">
+                <img src="{% static 'img/cad-livros.png' %}" alt="Cadastrar Livro" width="64" height="64">
+                <br>
+                <p>Cadastrar<br>Emprestimo</p>
+            </a>
+        </div>
+
+        <div class="button">
+            <a href="{% url 'emprestimos-listar' %}" title="Cadastrar Livro">
+                <img src="{% static 'img/listar.png' %}" alt="Listar Livros" width="64" height="64">
+                <br>
+                <p>Listar<br>Emprestimos</p>
+            </a>
+        </div>
+    </div>
+{% endblock %}

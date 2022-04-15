@@ -1,0 +1,98 @@
+{% extends "template.html" %}
+
+{% load static %}
+
+{% block nome_pagina %}
+    <title>Emprestimos</title>
+{% endblock %}
+
+{% block btn_voltar_pagina %}
+    <div class="label_menu_left">
+        <a href="{% url 'emprestimos-index' %}">Voltar</a>
+    </div>
+{% endblock %}
+
+{% block menus %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <section class="login-cadastro">
+        <div class="card-cadastro">
+            <div class="card-header">
+                <h2>Emprestimos</h2>
+            </div>
+
+            <div class="card-content">
+                <div class="card-cadastro-area">
+                    <label for="cars">Listar por:</label>
+                    <select name="cars" id="cars">
+                        <option value="ordenar_recentes_pendentes">Recentes pendentes</option>
+                        <option value="ordenar_recentes_concluidos">Recentes concluídos</option>
+                        <option value="todos">Todos </option>
+                    </select>
+                </div>
+    
+                <div class="card-cadastro-area">
+                    <form action="#"  method="post">
+                        <div class="search-content">
+                            <div class="search-area">
+                                <input type="text" id="matriculap" name="matriculap" value="" required placeholder="Pesquisar por matrícula do aluno">
+                            </div>
+        
+                            <div class="search-area">
+                                <input type="hidden" name="action" value="search">
+                                <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>  
+                </div>
+            </div>
+
+            <table border="1">
+                <tr >
+                    <th>Código</th>
+                    <th>Data do Emprestimo</th>
+                    <th>Data Limite da Devolução</th>
+                    <th>Data Limite Devolução</th>
+                    <th>Opções</th>
+                </tr>
+
+                <TR>
+                    <TD>id</TD>
+                    <TD>data emprestimo</TD>
+                    <TD>data limite</TD>
+                    <TD>data devolucao</TD>
+                    <TD>
+                        <input type="button" value="Devolver">
+                        <input type="button" value="Alterar">
+                        <input type="button" value="Apagar">
+                    </TD>
+                </TR>
+
+                <TR>
+                    <TD>id</TD>
+                    <TD>data emprestimo</TD>
+                    <TD>data limite</TD>
+                    <TD>data devolucao</TD>
+                    <TD>
+                        <input type="button" value="Devolver">
+                        <input type="button" value="Alterar">
+                        <input type="button" value="Apagar">
+                    </TD>
+                </TR>
+
+                <TR>
+                    <TD>id</TD>
+                    <TD>data emprestimo</TD>
+                    <TD>data limite</TD>
+                    <TD>data devolucao</TD>
+                    <TD>
+                        <input type="button" value="Devolver">
+                        <input type="button" value="Alterar">
+                        <input type="button" value="Apagar">
+                    </TD>
+                </TR>
+            </table>
+        </div>
+    </section>
+{% endblock %}

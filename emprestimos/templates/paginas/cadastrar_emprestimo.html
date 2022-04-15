@@ -1,0 +1,73 @@
+{% extends "template.html" %}
+
+{% load static %}
+
+{% block nome_pagina %}
+    <title>Cadastrar Emprestimo</title>
+{% endblock %}
+
+{% block btn_voltar_pagina %}
+    <div class="label_menu_left">
+        <a href="{% url 'emprestimos-index' %}">Voltar</a>
+    </div>
+{% endblock %}
+
+{% block menus %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <section class="login-cadastro">
+        <div class="card-cadastro">
+            <div class="card-header">
+                <h2>Cadastrar Emprestimo</h2>
+            </div>
+
+            <form action="#"  method="post">
+                <div class="search-content">
+                    <div class="search-area">
+                        <input type="text" id="matriculap" name="matriculap" autofocus value="" required placeholder="Pesquisar por matrícula">
+                    </div>
+
+                    <div class="search-area">
+                        <input type="hidden" name="action" value="search">
+                        <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+
+            <br><hr><br>
+
+            <form action="#" method="post">
+                <input type="hidden" name="action" value="cadastrarAluno">
+
+                <div class="card-content">
+                    <div class="card-cadastro-area">
+                        <label for="nome">Aluno</label>
+                        <input type="text" id="nome" name="nome" value="" placeholder="Pesquise um aluno" disabled/>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <div class="card-cadastro-area">
+                        <label for="data_emprestimo">Data do Emprestimo:</label>
+                        <input type="date" id="data_emprestimo" name="data_emprestimo" value="" />
+                    </div>
+                    
+                    <div class="card-cadastro-area">
+                        <label for="data_possivel_devolucao">Data Limite:</label>
+                        <input type="date" id="data_possivel_devolucao" name="data_possivel_devolucao" value="" />
+                    </div>
+
+                    <div class="card-cadastro-area">
+                        <label for="data_devolucao">Data de Devolucao:</label>
+                        <input type="date" id="data_devolucao" name="data_devolucao" value="" />
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <input type="submit" value="Cadastrar" class="submit">
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
