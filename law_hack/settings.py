@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'usuarios.apps.UsuariosConfig',
     'alunos.apps.AlunosConfig',
+    'livros.apps.LivrosConfig',
 ]
 
 MIDDLEWARE = [

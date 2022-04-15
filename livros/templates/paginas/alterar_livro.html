@@ -1,0 +1,97 @@
+{% extends "template.html" %}
+
+{% load static %}
+
+{% block nome_pagina %}
+    <title>Alterar Livro</title>
+{% endblock %}
+
+{% block btn_voltar_pagina %}
+    <div class="label_menu_left">
+        <a href="{% url 'livros-index' %}">Voltar</a>
+    </div>
+{% endblock %}
+
+{% block menus %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <section class="login-cadastro">
+        <div class="card-cadastro">
+            <div class="card-header">
+                <h2>Alterar Livro</h2>
+            </div>
+            
+            <div class="card-content">
+                <form action="#"  method="post">
+                    <div class="search-content">
+                        <div class="search-area">
+                            <input type="text" id="livrop" name="livrop" value="" required placeholder="Pesquisar por ISBN">
+                        </div>
+    
+                        <div class="search-area">
+                            <input type="hidden" name="action" value="search">
+                            <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+                
+                <br><hr><br>
+
+                <form action="#"  method="post">
+                    <div class="search-content">
+                        <div class="search-area">
+                            <input type="text" id="autorp" name="autorp" value="" required placeholder="Pesquisar por nome do Autor">
+                        </div>
+    
+                        <div class="search-area">
+                            <input type="hidden" name="action" value="search">
+                            <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+
+                <br><hr><br>
+
+                <label for="">Autor</label>
+                <form action="#"  method="post">
+                    <div class="search-content">
+                        <div class="search-area">
+                            <input type="text" id="id_autor" name="id_autor" placeholder="Pesquise um autor ou cadastre um novo" required>
+                        </div>
+    
+                        <div class="search-area">
+                            <input type="hidden" name="action" value="search">
+                            <button id="search" type="submit">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
+
+                <form action="#" method="POST">
+                    <div class="card-content">
+                        <input type="hidden" name="action" value="cadastrarLivro">
+                        
+                        <div class="card-login-area">
+                            <label for="nome">Nome do Livro</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="card-login-area">
+                            <label for="isbn">ISBN</label>
+                            <input type="text" id="isbn" name="isbn" value="" required>
+                        </div>
+
+                        <div class="card-login-area">
+                            <label for="ano_publicacao">Ano de Publicação</label>
+                            <input type="text" id="ano_publicacao" name="ano_publicacao" value="" required>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <input type="submit" value="Cadastrar" class="submit" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

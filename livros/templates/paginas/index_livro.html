@@ -1,0 +1,41 @@
+{% extends "template.html" %}
+
+{% load static %}
+
+{% block nome_pagina %}
+    <title>Livros</title>
+{% endblock %}
+
+{% block btn_voltar_pagina %}
+    <div class="label_menu_left">
+        <a href="{% url 'dashboard-index' %}">Voltar</a>
+    </div>
+{% endblock %}
+
+{% block menus %}
+    <div class="button-main">
+        <div class="button">
+            <a href="{% url 'livros-cadastrar' %}" title="Cadastrar Livro">
+                <img src="{% static 'img/cad-livros.png' %}" alt="Cadastrar Livro" width="64" height="64">
+                <br>
+                <p>Cadastrar<br>Livro</p>
+            </a>
+        </div>
+
+        <div class="button">
+            <a href="{% url 'livros-alterar' %}" title="Alterar Livro">
+                <img src="{% static 'img/editar.png' %}" alt="Alterar Livro" width="64" height="64">
+                <br>
+                <p>Alterar<br>Livro</p>
+            </a>
+        </div>
+
+        <div class="button">
+            <a href="{% url 'livros-listar' %}" title="Listar Livro">
+                <img src="{% static 'img/listar.png' %}" alt="Listar Livro" width="64" height="64">
+                <br>
+                <p>Listar<br>Livros</p>
+            </a>
+        </div>
+    </div>
+{% endblock %}
