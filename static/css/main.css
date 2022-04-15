@@ -254,3 +254,7 @@ footer {
     cursor: pointer;
     font-weight: bold;
 }
+
+table {
+  color: white;
+}
