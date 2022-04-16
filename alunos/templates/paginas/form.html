@@ -6,6 +6,12 @@
     <title>Cadastrar Aluno</title>
 {% endblock %}
 
+{% block btn_sair %}
+    <div class="right">
+        <a href="{% url 'usuarios-logout' %}">Sair</a>
+    </div>
+{% endblock %}
+
 {% block btn_voltar_pagina %}
     <div class="label_menu_left">
         <a href="{% url 'index_aluno' %}">Voltar</a>

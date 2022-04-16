@@ -17,14 +17,14 @@
         </div>
 
         {% block btn_voltar_pagina %}
-            <div class="label_menu_left">
-                <a href="#">Voltar</a>
-            </div>
+            <img src="{% static 'img/biblioteca-on-line.png' %}" alt="Lib" height="40px">
         {% endblock %}
 
-        <div class="right">
-            <a href="#">Sair</a>
-        </div>
+        {% block btn_sair %}
+            <div class="right">
+                <a href="#">Sair</a>
+            </div>
+        {% endblock %}
     </header>
 
     {% block menus %}
