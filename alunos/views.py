@@ -27,6 +27,13 @@ class CadastrarAluno(LoginRequiredMixin, CreateView):
         'endereco',
     ]
 
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+
+        context['titulo'] = 'Cadastrar Aluno'
+
+        return context
+
 
 class AlterarAluno(LoginRequiredMixin, UpdateView):
     login_url = reverse_lazy('usuarios-login')
@@ -41,6 +48,13 @@ class AlterarAluno(LoginRequiredMixin, UpdateView):
         'telefone',
         'endereco',
     ]
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+
+        context['titulo'] = 'Alterar Aluno'
+
+        return context
 
 
 class ListarAlunos(LoginRequiredMixin, ListView):
