@@ -50,8 +50,6 @@
 
             <table border="1">
                 <tr >
-                    <th>Código</th>
-                    <th>CPF</th>
                     <th>Matricula</th>
                     <th>Nome</th>
                     <th>Email</th>
@@ -59,39 +57,23 @@
                     <th>Endereco</th>
                     <th>Opções</th>
                 </tr>
-
-                <TR>
-                    <TD>id</TD>
-                    <TD>cpf</TD>
-                    <TD>matricula</TD>
-                    <TD>nome</TD>
-                    <TD>email</TD>
-                    <TD>telefone</TD>
-                    <TD>endereco</TD>
-                    <TD><input type="button" value="Alterar"> <input type="button" value="Apagar"></TD>
-                </TR>
-
-                <TR>
-                    <TD>id</TD>
-                    <TD>cpf</TD>
-                    <TD>matricula</TD>
-                    <TD>nome</TD>
-                    <TD>email</TD>
-                    <TD>telefone</TD>
-                    <TD>endereco</TD>
-                    <TD><input type="button" value="Alterar"> <input type="button" value="Apagar"></TD>
-                </TR>
-
-                <TR>
-                    <TD>id</TD>
-                    <TD>cpf</TD>
-                    <TD>matricula</TD>
-                    <TD>nome</TD>
-                    <TD>email</TD>
-                    <TD>telefone</TD>
-                    <TD>endereco</TD>
-                    <TD><input type="button" value="Alterar"> <input type="button" value="Apagar"></TD>
-                </TR>
+                {% for aluno in object_list %}
+                    <tr>
+                        <TD>{{ aluno.matricula }}</TD>
+                        <TD>{{ aluno.nome }}</TD>
+                        <TD>{{ aluno.email }}</TD>
+                        <TD>{{ aluno.telefone }}</TD>
+                        <TD>{{ aluno.endereco }}</TD>
+                        <TD>
+                            <a href="{% url 'alterar_aluno' aluno.pk %}">Alterar</a>
+                            <a href="">Excluir</a>
+                        </TD>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3">Nenhum aluno cadastrado.</td>
+                    </tr>
+                {% endfor %}
             </table>
         </div>
     </section>
